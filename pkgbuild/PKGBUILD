@@ -1,7 +1,7 @@
-# Maintainer: Barnabé di Kartola <barnabedikartola@gmail.com>
+# Maintainer: Tales A. Mendonça <talesam@gmail.com>
 
-pkgname=biglinux-package-template
-pkgdesc="Package template for biglinux"
+pkgname=biglinux-wallpapers-gnome
+pkgdesc="set of wallpapers for Gnome"
 # depends=('')
 # makedepends=('')
 # conflicts=('')
