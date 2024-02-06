@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Update the wallpapers whenever a wallpaper package is installed and includes it in gnome
+echo '<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>' > /usr/share/gnome-background-properties/biglinux-gnome.xml
+
+shopt -s nocasematch
+for img in /usr/share/wallpapers/*; do
+    if [[ $img =~ \.(jpg|jpeg|png|bmp|avif|webp|tiff)$ ]]; then
+        name=${img##/}
+        name=${name##*/}
+        name=${name%%.*}
+        name=${name^}
+echo "<wallpaper>
+<name>$name</name>
+<filename>$img</filename>
+<options>zoom</options>
+</wallpaper>" >> /usr/share/gnome-background-properties/biglinux-gnome.xml
+    fi
+done
+shopt -u nocasematch
+
+echo '</wallpapers>' >> /usr/share/gnome-background-properties/biglinux-gnome.xml

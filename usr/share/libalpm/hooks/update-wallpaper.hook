@@ -1,0 +1,11 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = usr/share/wallpapers
+Target = biglinux-wallpapers-gnome
+
+[Action]
+Description = BigLinux update wallpapres
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/update-wallpaper
