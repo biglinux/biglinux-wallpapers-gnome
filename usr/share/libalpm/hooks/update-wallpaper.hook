@@ -1,9 +1,8 @@
 [Trigger]
-Type = Package
+Type = Path
 Operation = Install
 Operation = Upgrade
 Target = usr/share/wallpapers
-Target = biglinux-wallpapers-gnome
 
 [Action]
 Description = BigLinux update wallpapres
