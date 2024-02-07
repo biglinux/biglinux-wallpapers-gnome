@@ -2,7 +2,7 @@
 Type = Path
 Operation = Install
 Operation = Upgrade
-Target = usr/share/wallpapers
+Target = usr/share/wallpapers/*
 
 [Action]
 Description = BigLinux update wallpapres
